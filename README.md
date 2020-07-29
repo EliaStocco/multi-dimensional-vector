@@ -37,7 +37,7 @@ std::array<index_t,1> i1 = {0};
 // 2D index
 std::array<index_t,2> i2 = {1,0};
 ```
-and then you have different equivalent ways to speicify the element to get or to set:
+and then you have different equivalent ways to specify the element to get or to set:
 - 1D array
 ```cpp
 //The following are equivalent (1D matrix)
@@ -89,7 +89,7 @@ float  b[3][4];
 int    c[3][4][2];
 ```
 The provided class works as follows:
-- 1D array is a primitive class, inherited by ```std::vector<***>``` (by default, or from another class if specified) where ```***``` is the type of the contained variable
+- 1D array is a primitive class, it inherits from ```std::vector<***>``` (by default, or from another class if specified) where ```***``` is the type of the contained variable (```double``` in the previus examples)
 - 2D array is a 1D array of 1D array, something like ```std::vector<std::vector<***>>```
 - 2D array is a 1D array of 2D array, something like ```std::vector<std::vector<std::vector<***>>>```
 - etc
@@ -99,7 +99,7 @@ For this reason, if you allocate the following variables
 dynamic_vector < 1 , double > matrix1D = {{ 3 }};
 dynamic_vector < 2 , double > matrix2D = {{ 2 , 3 }};
 ```
-the variable``` matrix2D[0]``` has the same type of the ```matrix1D```, in fact you can do the following
+the variable ```matrix2D[0]``` has the same type of the ```matrix1D```, in fact you can do the following
 ```cpp
 matrix1D[0] = 2.0;
 matrix1D[1] = 4.0;
