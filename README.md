@@ -107,6 +107,3 @@ matrix1D[2] = 5.0;
 
 matrix2D[1] =  matrix1D
 ```
-
-### Iterator
-Working progess...
